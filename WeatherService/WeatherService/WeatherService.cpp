@@ -3,10 +3,13 @@
 
 #include <iostream>
 #include "JsonService.h"
+#include "XmlService.h"
 using namespace std;
 
 int main()
 {
+    XmlService xs;
+    Weather w = xs.getWeather("weather.xml");
     JsonService js;
     Weather w = js.getWeather("weather.json");
 }
